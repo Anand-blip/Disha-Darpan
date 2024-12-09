@@ -1,0 +1,71 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scouts and Guides Dashboard</title>
+  <link rel="stylesheet" href="vstylescout.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Scouts-Guides Disha Darpan">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="indexscout.html">Home</a></li>
+        <li><a href="#books">Books</a></li>
+        <li><a href="#dashboard">Dashboard</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Registration and Login Section -->
+  <section id="auth">
+    <h2>Login / Register</h2>
+    <div id="login-form">
+      <input type="email" id="email" placeholder="Enter your email" />
+      <input type="password" id="password" placeholder="Enter your password" />
+      <button onclick="loginUser()">Login</button>
+      <p>Don't have an account? <a href="javascript:void(0)" onclick="toggleForm()">Register here</a></p>
+    </div>
+    <div id="register-form" style="display: none;">
+      <input type="text" id="name" placeholder="Enter your name" />
+      <input type="email" id="reg-email" placeholder="Enter your email" />
+      <input type="password" id="reg-password" placeholder="Enter your password" />
+      <input type="text" id="referral-code" placeholder="Enter referral code (optional)" />
+      <button onclick="registerUser()">Register</button>
+      <p>Already have an account? <a href="javascript:void(0)" onclick="toggleForm()">Login here</a></p>
+    </div>
+  </section>
+
+  <!-- Dashboard Section -->
+  <section id="dashboard" style="display: none;">
+    <h2>Welcome, <span id="user-name">User</span></h2>
+    <p>Progress: <span id="user-progress">0</span> Stars</p>
+    <p>Your Referral Code: <span id="referral-id">ABC123</span></p>
+    <p>Your Stars: <span id="stars-collected">0</span></p>
+    <button onclick="viewBooks()">View Books</button>
+  </section>
+
+  <!-- Books Section -->
+  <section id="books" style="display: none;">
+    <h2>Scout/Guide Books</h2>
+    <ul>
+      <li><a href="#">Book 1 - Guide to Scouting</a></li>
+      <li><a href="#">Book 2 - Scout Leadership</a></li>
+      <li><a href="#">Book 3 - Outdoor Adventures</a></li>
+    </ul>
+    <button onclick="backToDashboard()">Back to Dashboard</button>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>Contact us: info@scoutsandguides.com</p>
+  </footer>
+
+  <script src="scout logid.js"></script>
+</body>
+</html>
